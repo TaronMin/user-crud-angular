@@ -1,0 +1,23 @@
+<form [formGroup]="contactForm" *ngIf="contactForm">
+  <p>
+    <label for="firstName">First Name: </label>
+    <input id="firstName" type="text" formControlName="firstName"
+           [appFormValidation]="contactForm.controls['firstName']" [element]="firstName" #firstName>
+  </p>
+  <p>
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName"
+           [appFormValidation]="contactForm.controls['lastName']" [element]="lastName" #lastName>
+  </p>
+  <app-button-component [className]="btnClassName" (click)="onSubmit()"
+                        *ngIf="contactForm.controls['lastName'].valid && contactForm.controls['firstName'].valid">Update
+  </app-button-component>
+
+  <form formArrayName="actions">
+    <div *ngFor="let action of getActions.controls; let idx = index">
+      <input formControlName="{{idx}}">
+      <app-button-component [className]="btnDelClassName" (click)="deleteAction(idx)">Delete</app-button-component>
+    </div>
+    <app-button-component [className]="btnClassName" (click)="addAction()">Add action</app-button-component>
+  </form>
+</form>

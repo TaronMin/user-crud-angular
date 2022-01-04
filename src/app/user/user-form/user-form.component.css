@@ -1,0 +1,32 @@
+.main {
+  width: 400px;
+  padding: 20px;
+  background: #fac000;
+  margin: 100px auto;
+  border-radius: 5px;
+}
+
+p {
+  margin-top: 15px;
+}
+
+input {
+  padding: 5px 10px;
+  background: #c1c1c1;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 8px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  background: #4242f4;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+.error-message{
+  display: inline-block;
+  color: red;
+  margin: 10px 0 5px 10px;
+}

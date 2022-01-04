@@ -1,0 +1,91 @@
+.styled-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: 150px auto;
+}
+
+.styled-table thead tr {
+  background-color: #4242f4;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+
+.update, .delete,.create-user {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fac000;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  margin-right: 15px;
+}
+
+.delete {
+  background: #f82b2b;
+}
+
+.update:hover,
+.update:focus,
+.delete:hover,
+.delete:focus,
+.create-user:hover,
+.create-user:focus{
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.update:hover, .delete:hover,.create-user:hover {
+  transform: translateY(-1px);
+}
+
+.create-user {
+  background: #4242F4;
+  margin: 10px;
+}
+
+.search-user {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #c1c1c1;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+.search-find{
+  width: 370px;
+  margin: 50px auto 50px auto;
+}

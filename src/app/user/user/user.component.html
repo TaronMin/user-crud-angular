@@ -1,0 +1,28 @@
+<div class="search-find">
+  <input class="search-user" type="text" [(ngModel)]="searchUserInput">
+  <app-button-component [className]="btnComponent.createUser" (click)="filterUsers(searchUserInput)">Search</app-button-component>
+</div>
+<table class="styled-table">
+  <app-button-component [className]="btnComponent.createUser" routerLink="create">Add User</app-button-component>
+  <thead>
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users, let idx = index">
+    <td>
+      {{idx + 1}}
+    </td>
+    <td>
+      {{user.firstName}} {{user.lastName}}
+    </td>
+    <td>
+      <app-button-component [className]="btnComponent.update" (click)="onUpdate(user)">Update</app-button-component>
+      <app-button-component [className]="btnComponent.deleteClass" (click)="onDelete(user)">Delete</app-button-component>
+    </td>
+  </tr>
+  </tbody>
+</table>
